@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@keyframes movers {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+.image-animation {
+  animation: movers 1s ease-in-out infinite alternate;
+}
+
+*{
+  font-family: "Poppins", serif;
+}
+
+
+
+
+   @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+  
+  .slider {
+    background: #16589D;
+    margin: 0;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125); 
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    transform: 50%,50%;
+    translate: -50%,-50%;
+    left: 10%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+   
+  }
+  
+  .slider::before,
+  .slider::after {
+    content: "";
+    height: 450px;
+    position: absolute;
+    width: 400px;
+    z-index: 2;
+    border-color: aqua;
+  }
+  
+  .slider::after {
+    right: 0;
+    top: 0;
+     transform: rotateZ(180deg); 
+  }
+  
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  
+  .slider .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
+  
+  .slider .slide {
+    height: 100px;
+    width: 200px;
+    
+  }
+
+  div.scrollmenu {
+    background-color: #333;
+    overflow: auto;
+    display: flex;
+    gap:20;
+    white-space: nowrap;
+  }
+  
+  div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    
+    text-decoration: none;
+  }
+  
+  div.scrollmenu a:hover {
+    background-color: #777;
+  }
+  
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .swiper-button-next,
+.swiper-button-prev {
+  background-color: #ffffff; /* White background */
+  border-radius: 50%; /* Rounded button */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #333; /* Dark color for arrow icons for better contrast */
+  font-size: 16px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #f3f4f6; /* Light gray hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow on hover */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: 50%;
+  transform: translateY(-50%);
+}
